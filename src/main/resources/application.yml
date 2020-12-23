@@ -1,0 +1,33 @@
+#springboot配置
+#yaml的语法 类似于json的数据格式
+#空格
+#可以注入配置类
+server:
+  port: 8088
+spring:
+  profiles:
+    active: dev
+
+person:
+  name: 寇王
+  age: 21
+  map: {k1: v1,k2: v2}
+  list: [music,girl]
+  dog:
+    name: wangwang
+    age: 3
+
+dog:
+  name: dog@qq.com
+  age: 10
+
+---
+server:
+  port: 8081
+spring:
+  profiles: test
+---
+server:
+  port: 8087
+spring:
+  profiles: dev
